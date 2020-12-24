@@ -15,12 +15,16 @@ function myFunction(){
         var weather = data.weather[0].main;
         var high = Math.floor(data.main.temp_max);
         var low = Math.floor(data.main.temp_min);
+        var windSpeed = data.wind.speed;
+        var windDeg = data.wind.deg;
 
         $('.icon').attr('src', icon);
         $('.temp').append(temp);//append because your adding into this tag, image was a src itself, thats the difference
         $('.weather').append(weather);
         $('.high').append(high);
         $('.low').append(low);
+        $('.speed').append(windSpeed);
+        $('.deg').append(windDeg);
         
     });
     //not sure how to clear the previous data yet. allow multiple queries without having
